@@ -32,6 +32,7 @@ class Actor(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
+
 class CinemaHall(models.Model):
     name = models.CharField(max_length=20)
     rows = models.IntegerField()
