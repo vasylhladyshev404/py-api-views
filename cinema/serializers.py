@@ -20,7 +20,7 @@ class MovieSerializer(serializers.Serializer):
     def create(self, validated_data):
         actors = validated_data.pop("actors", [])
         genres = validated_data.pop("genres", [])
-        movie = Movie.objects.create(**validated_data) 
+        movie = Movie.objects.create(**validated_data)
         movie.actors.set(actors)
         movie.genres.set(genres)
         return movie
